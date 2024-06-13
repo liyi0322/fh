@@ -48,6 +48,12 @@ public class CounterController {
     return ApiResponse.ok(count);
   }
 
+    @GetMapping(value = "/api/test")
+    ApiResponse test() {
+        logger.info("/api/test get request");
+        return ApiResponse.ok("333");
+    }
+
 
   /**
    * 更新计数，自增或者清零
